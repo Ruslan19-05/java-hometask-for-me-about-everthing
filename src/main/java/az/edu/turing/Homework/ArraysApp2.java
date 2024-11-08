@@ -23,6 +23,7 @@ public class ArraysApp2 {
             n++;
         }
         average=sum/n;
+        //output
         System.out.println(sum);
         System.out.println(average);
     }
