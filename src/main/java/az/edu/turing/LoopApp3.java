@@ -8,19 +8,13 @@ public class LoopApp3 {
         //input
         System.out.println("Enter a number : ");
         Scanner scanner =new Scanner(System.in);
-        int sum=0;
-        //prosess
-        while(true) {
-            System.out.println("enter teh number : ");
-            int number1 = scanner.nextInt();
-                if(number1==0){
-                    break;
+        int mon=scanner.nextInt();
+        int age=0;
+                for (int i=0;i<=age;i++){
+                    i=mon-mon*2;
+                    age=i;
                 }
-                sum+=number1;
-        }
-        //output
-        System.out.println(sum);
-
+                System.out.print(age);
 
     }
 }
