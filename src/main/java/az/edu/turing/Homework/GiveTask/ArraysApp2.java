@@ -6,16 +6,26 @@ public class ArraysApp2 {
 
     public static void main(String[] args) {
         //input
-        System.out.println("enter your word: ");
+        System.out.println("enter a word: ");
         Scanner scanner = new Scanner(System.in);
-        String word= scanner.nextLine();
-        int a=0;
-        String letter="a,e,i,u,o";
-        for(int i=0;i<word.length();i++){
-            a=i;
-                if(letter.charAt(a)==word.charAt(a))
-                    System.out.println("Sait herif var");
+        String word = scanner.nextLine();
+        int b = 0;
+        char[] a = {'a','e','u','o','i'};
+        //prosess
+        for (int i = 0; i < word.length(); i++) {
+            b = i;
         }
-        System.out.println("Sait herif yoxdurr");
+        System.out.println(word.charAt(b));
+        for(int j=0;j< a.length;j++){
+
+
+            if (word.charAt(b) == a[j] ){
+                System.out.println("Sait herifdir");
+                break;
+            }else {
+                System.out.println("sait deyil");
+                break;
+            }
+        }
     }
 }
