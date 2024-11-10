@@ -7,7 +7,6 @@ public class ArraysApp3 {
 
     public static void main(String[] args) {
        //input
-
         System.out.println("enter a word: ");
         Scanner scanner = new Scanner(System.in);
         String word=scanner.nextLine();
@@ -18,7 +17,7 @@ public class ArraysApp3 {
         }
         for(int j=word.length()-1;j>=0;j--){
             reverse=reverse + word.charAt(j);
-        }
+         }
         System.out.println(reverse.toUpperCase());
     }
 }
