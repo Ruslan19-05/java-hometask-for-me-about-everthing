@@ -2,7 +2,7 @@ package az.edu.turing.Homework;
 
 import java.util.Scanner;
 
-public class Quiztask1 {
+public class SomeTasksApp {
 
     public static void main(String[] args) {
         //input
