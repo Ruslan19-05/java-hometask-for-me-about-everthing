@@ -24,6 +24,17 @@ public class BigTask2App {
                 b = sc.nextInt(5);
             }
             area[a][b] = "*";
+            if(area[d][c]==(area[a][b])) {
+                area[d][c] = "x";
+                for(int i=0;i<5;i++){
+                    for(int j=0;j<5;j++){
+                        System.out.print(area[i][j]==null? "-":area[i][j]);
+                    }
+                    System.out.println();
+                }
+                System.out.println("You Won!");
+                break;
+            }
             for (int i = 0; i < 5; i++) {
                 for (int j = 0; j < 5; j++) {
                     //if(area[i][j]==null){
@@ -31,12 +42,7 @@ public class BigTask2App {
                     System.out.print(area[i][j] == null ? "-" : area[i][j]);
                 }
                 System.out.println();
-            }
-            if(area[d][c]==(area[a][b])){
-                area[d][c]="x";
-                System.out.println("You Won!");
-                break;
-            }
+                }
         }
     }
 }
