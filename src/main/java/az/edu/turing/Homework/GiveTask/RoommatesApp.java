@@ -14,18 +14,18 @@ public class RoommatesApp {
                 "Revan.E", "Seyran", "Senubar", "Tural", "Yetar", "Э.Приева", "~R"};
         int[] chair = new int[24];
         //proses
-        for(int i=0;i<chair.length;i++){//ededler üçün
-            chair[i]=i+1;
+        for (int i = 0; i < chair.length; i++) {//ededler üçün
+            chair[i] = i + 1;
         }
-       for(int i=chair.length-1;i>0;i--) {//ədələri qarışdırmaq üçün
-           int j = random.nextInt(24);
-           int temp=chair[i];
-           chair[i]=chair[j];
-           chair[j]=temp;
-       }
-       //output
-       for (int i = 0; i < sutdents.length; i++) {//çap
-                System.out.println(sutdents[i] + "--" + chair[i]);
+        for (int i = chair.length - 1; i > 0; i--) {//ədələri qarışdırmaq üçün
+            int j = random.nextInt(24);
+            int temp = chair[i];
+           chair[i] = chair[j];
+            chair[j] = temp;
+        }
+        //output
+        for (int i = 0; i < sutdents.length; i++) {//çap
+            System.out.println(sutdents[i] + "--" + chair[i]);
         }
     }
 }
