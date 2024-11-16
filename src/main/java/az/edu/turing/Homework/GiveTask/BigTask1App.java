@@ -23,7 +23,7 @@ public class BigTask1App {
                 System.out.println("Your number is too big.Please try agin..");
                 number = sc.nextInt();
             } else {
-                System.out.println("Conguratulations,{name}");
+                System.out.println("Conguratulations,"+name);
                 break;
             }
         }

@@ -43,6 +43,7 @@ public class BigTask2App {
                 }
                 System.out.println();
                 }
+
         }
     }
 }
