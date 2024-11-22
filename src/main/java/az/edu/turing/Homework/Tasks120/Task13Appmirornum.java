@@ -6,8 +6,8 @@ public class Task13Appmirornum {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int num2 = sc.nextInt();
         int num3 = sc.nextInt();
+        int num2 = sc.nextInt();
         int num=num3;
         int b;
         int d=0;

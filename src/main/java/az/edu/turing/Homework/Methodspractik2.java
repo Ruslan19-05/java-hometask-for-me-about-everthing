@@ -10,12 +10,13 @@ public class Methodspractik2 {
         fibbo(num);
     }
 
-    public static int fibbo(int a){
-        int first=0;
-        int second=1;
-        int count=0;
-        for(int i=2;i<a;i++){
-            count=first+second;
+    public static int fibbo(int a) {
+        int first = 0;
+        int second = 1;
+        int count = 0;
+        for (int i = 2; i < a; i++) {
+            count = first + second;
         }
+        return a;
     }
 }

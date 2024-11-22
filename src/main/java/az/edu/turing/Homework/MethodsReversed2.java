@@ -1,22 +1,21 @@
 package az.edu.turing.Homework;
 
-//import java.util.Scanner;
-
-
-import java.util.Locale;
+import java.util.Scanner;
 
 public class MethodsReversed2 {
 
-    public static String reverseString(String str){
-        String reversed="";
-        for(int i=str.length()-1;i>=0;i--){
-            reversed+=str.charAt(i);
+    public static int reverseString(int str){
+        int reversed=0;
+        while(str>0){
+            reversed=reversed*10+(str%10);
+            str=str/10;
         }
         return reversed;
     }
     public static void main(String []args){
-        String original="Ruslan";
-        String ters=reverseString(original);
-                System.out.println(ters.toUpperCase(Locale.ROOT));
+        Scanner sc=new Scanner(System.in);
+        int  original=sc.nextInt();
+        int ters=reverseString(original);
+                System.out.println(ters);
     }
 }
