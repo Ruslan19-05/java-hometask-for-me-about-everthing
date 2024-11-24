@@ -20,7 +20,7 @@ public class Easy24App {
                 }
                 boolean isPrime = true;
 
-                for (int i = 2; i < j; i++) {
+                for (int i = 2; i <= Math.sqrt(j); i++) {
                     if (j % i == 0) {
                         isPrime = false;
                         break;

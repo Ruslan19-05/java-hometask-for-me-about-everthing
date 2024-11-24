@@ -6,7 +6,7 @@ public class Medium10factorial {
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        int f=sc.nextInt();
+        long f=sc.nextLong();
         int i=1;
         int b=1;
         while(f>1 && i<=2000){
