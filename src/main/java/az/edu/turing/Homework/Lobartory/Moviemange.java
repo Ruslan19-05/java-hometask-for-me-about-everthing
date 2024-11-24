@@ -1,6 +1,6 @@
 package az.edu.turing.Homework.Lobartory;
 
-import java.util.Scanner;
+
 
 class Movie {
     public String name;

@@ -69,6 +69,7 @@ public class MovieApp {
 
         public void inputMovies(Scanner scanner) {
             Movie[] newMovies = new Movie[movies.length + 3];
+
             for (int i = 0; i < movies.length; i++) {
                 newMovies[i] = movies[i];
             }
