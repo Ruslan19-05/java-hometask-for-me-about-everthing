@@ -25,7 +25,7 @@ public class FiveTask4App {
         for(int i=1;i<n.length;i++){
             if(max<n[i]){
                 max=n[i];
-                s++;
+                s=i;
             }
         }
         System.out.println(s);

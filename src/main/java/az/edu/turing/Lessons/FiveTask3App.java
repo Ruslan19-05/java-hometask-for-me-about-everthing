@@ -1,7 +1,5 @@
 package az.edu.turing.Lessons;
 
-import javax.sound.midi.Soundbank;
-import javax.xml.transform.sax.SAXSource;
 import java.util.Scanner;
 
 public class FiveTask3App {
