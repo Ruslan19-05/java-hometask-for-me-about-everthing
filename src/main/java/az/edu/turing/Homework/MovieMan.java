@@ -1,11 +1,11 @@
 package az.edu.turing.Homework;
 
-public class MovieMan {
+class MovieMan {
 
-    public String [] name;
+    public String  name;
     public double rating;
 
-        public MovieMan(String[]name,int rating){
+        public MovieMan(String name, double rating){
             this.name=name;
             this.rating=rating;
         }
