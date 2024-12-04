@@ -9,13 +9,13 @@ public class Task10App {
         Scanner sc = new Scanner(System.in);
         double k = sc.nextDouble();
         int n = 1;
-        int num = 1;
+        int num = 3;
         int sum = 0;
 
         if (k <= Math.pow(10, 8)) {
             while (true) {
 
-                if (num % k == 0) {
+                if (k %num  == 0) {
                     sum += num;
                     n++;
                     break;
