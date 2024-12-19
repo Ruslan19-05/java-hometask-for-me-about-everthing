@@ -20,6 +20,8 @@ public class Family {
     public Family(Human mother,Human father,Human []children){
         this.mother=mother;
         this.father=father;
+        this.mother.setFamily(this);
+        this.father.setFamily(this);
     }
 
     public Human getMother() {
@@ -59,11 +61,36 @@ public class Family {
         Human[] newChildren=Arrays.copyOf(children,children.length+1);
         newChildren[children.length]=child;
         children=newChildren;
+
+        child.setFamily(this);
     }
 
-    public void deleteChild(Human child){
+    public boolean deleteChild(int index){
+        if(index<0 || index >=children.length){
+            return false;
+        }
 
+        children[index].setFamily(null);
+
+        Human[] newChild=new Human[children.length-1];
+        for(int i=0,j=0;i<children.length;i++){
+            if(i!=index){
+                newChild[j++]=children[i];
+            }
+        }
+        children=newChild;
+        return true;
     }
+
+    public boolean deleteChild(Human child) {
+        for (int i = 0; i < children.length; i++) {
+            if (children[i].equals(child)) {
+                return deleteChild(i);
+            }
+        }
+        return false;
+    }
+
 
     public int countFamily(){
         if(children!=null){
