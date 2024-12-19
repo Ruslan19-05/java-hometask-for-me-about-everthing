@@ -11,19 +11,17 @@ public class Human {
     private int dateOfBirth;
     private int iQ;
     private Pet pet;
-    private Human mother;
-    private Human father;
-    private int [][] schedule;
+    private DayOfWeek[][] schedule;
+    private Family family;
 
-    public Human(String name, String surname, int dateOfBirth, int iQ, Pet pet, Human mother, Human father, int[][] schedule) {
+    public Human(String name, String surname, int dateOfBirth, int iQ, Pet pet,Human mother,Human father, DayOfWeek[][] schedule,Family family) {
         this.name = name;
         this.surname = surname;
         this.dateOfBirth = dateOfBirth;
         this.iQ = iQ;
         this.pet = pet;
-        this.mother = mother;
-        this.father = father;
         this.schedule = schedule;
+        this.family=family;
     }
 
     public Human(String name,String surname,int dateOfBirth){
@@ -35,12 +33,6 @@ public class Human {
     public Human(String name,String surname,Human father,Human mother){
         this.name=name;
         this.surname=surname;
-        this.father=father;
-        this.mother=mother;
-    }
-
-    public Human(){
-
     }
 
     public String getName() {
@@ -83,32 +75,16 @@ public class Human {
         this.pet = pet;
     }
 
-    public Human getMother() {
-        return mother;
-    }
-
-    public void setMother(Human mother) {
-        this.mother = mother;
-    }
-
-    public Human getFather() {
-        return father;
-    }
-
-    public void setFather(Human father) {
-        this.father = father;
-    }
-
-    public int[][] getSchedule() {
+    public DayOfWeek[][] getSchedule() {
         return schedule;
     }
 
-    public void setSchedule(int[][] schedule) {
+    public void setSchedule(DayOfWeek [][] schedule) {
         this.schedule = schedule;
     }
 
     public void greetPet(){
-        System.out.println("Hello,"+pet.getNickname());
+        System.out.println("Geeatring pet");
     }
 
     public void describePet(){
@@ -150,9 +126,6 @@ public class Human {
                 ", surname='" + surname + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
                 ", iQ=" + iQ +
-                ", pet=" + pet +
-                ", mother=" + mother +
-                ", father=" + father +
                 ", schedule=" + Arrays.toString(schedule) +
                 '}';
     }
@@ -162,11 +135,11 @@ public class Human {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Human human = (Human) o;
-        return dateOfBirth == human.dateOfBirth && iQ == human.iQ && Objects.equals(name, human.name) && Objects.equals(surname, human.surname) && Objects.equals(pet, human.pet) && Objects.equals(mother, human.mother) && Objects.equals(father, human.father) && Objects.deepEquals(schedule, human.schedule);
+        return dateOfBirth == human.dateOfBirth && iQ == human.iQ && Objects.equals(name, human.name) && Objects.equals(surname, human.surname) && Objects.equals(pet, human.pet) && Objects.deepEquals(schedule, human.schedule);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, surname, dateOfBirth, iQ, pet, mother, father, Arrays.deepHashCode(schedule));
+        return Objects.hash(name, surname, dateOfBirth, iQ, pet,Arrays.deepHashCode(schedule));
     }
 }
