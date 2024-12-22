@@ -3,8 +3,8 @@ package az.edu.turing.ProjectFamilyApp;
 public enum Species {
 
     FISH,
-    DOMESTICCAT,
+    DOMESTIC_CAT,
     DOG,
-    ROBOCAT,
+    ROBO_CAT,
     UNKNOWN
 }

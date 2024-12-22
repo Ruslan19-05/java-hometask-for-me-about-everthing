@@ -11,9 +11,17 @@ public class Man extends Human{
         super(name, surname, father, mother);
     }
 
+    public Man(String name,String surname){
+        super(name,surname);
+    }
+
     @Override
     public void greetPet(){
         System.out.println("Hello,"+getPet().getNickname());
+    }
+
+    public void repairCar(){
+        System.out.println("Fixing the car...");
     }
 
 }

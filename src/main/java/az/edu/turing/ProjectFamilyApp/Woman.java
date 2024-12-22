@@ -10,8 +10,16 @@ public class Woman extends Human{
         super(name, surname, father, mother);
     }
 
+    public Woman(String name,String surname){
+        super(name,surname);
+    }
+
     @Override
     public void greetPet(){
+        System.out.println("Hello my lovely pet!");
+    }
 
+    public void makeUp(){
+        System.out.println("Doing makeup...");
     }
 }

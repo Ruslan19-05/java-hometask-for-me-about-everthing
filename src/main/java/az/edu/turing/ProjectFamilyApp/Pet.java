@@ -10,7 +10,7 @@ public abstract class Pet {
     private int trickLevel;
     private String[] habits;
 
-    public Pet(Species species,String nickname,int age,int trickLevel,String[] habits){
+    public Pet(String nickname,int age,int trickLevel,String[] habits){
         this.nickname=nickname;
         this.age=age;
         this.trickLevel=trickLevel;
@@ -67,12 +67,10 @@ public abstract class Pet {
     }
 
     public void eat(){
-        System.out.println("I am eating.");
+        System.out.println(nickname+" am eating.");
     }
 
-    public void respond(){
-        System.out.println("Hello, owner. I am " +nickname+ " name of the pet. I miss you!");
-    }
+    public abstract void respond();
 
     public void foul(){
         System.out.println("I need to cover it up!");

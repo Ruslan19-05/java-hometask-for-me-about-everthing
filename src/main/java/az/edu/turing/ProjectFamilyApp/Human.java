@@ -35,6 +35,11 @@ public class Human {
         this.surname=surname;
     }
 
+    public Human(String name,String surname){
+        this.name=name;
+        this.surname=surname;
+    }
+
     public String getName() {
         return name;
     }
@@ -92,7 +97,7 @@ public class Human {
     }
 
     public void greetPet(){
-        System.out.println("Geeatring pet");
+        System.out.println("Hello,Pet!");
     }
 
     public void describePet(){
