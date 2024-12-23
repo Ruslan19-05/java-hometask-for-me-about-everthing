@@ -23,12 +23,6 @@ public abstract class Pet {
         this.trickLevel=trickLevel;
     }
 
-    public Pet(String nickname,int age,int trickLevel){
-        this.nickname=nickname;
-        this.age=age;
-        this.trickLevel=trickLevel;
-    }
-
     public Pet( String nickname) {
         this.nickname = nickname;
     }

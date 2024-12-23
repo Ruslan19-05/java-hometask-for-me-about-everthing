@@ -30,11 +30,6 @@ public class Human {
         this.dateOfBirth=dateOfBirth;
     }
 
-    public Human(String name,String surname,Human father,Human mother){
-        this.name=name;
-        this.surname=surname;
-    }
-
     public Human(String name, String surname, int year, int iq, DayOfWeek[][] schedule, Family family){
         this.name=name;
         this.surname=surname;
@@ -50,7 +45,7 @@ public class Human {
         this.family = family;
     }
 
-    public Human(String name, String surname, int age, int iQ, String[][] schedule, Family family) {
+    public Human() {
 
     }
 

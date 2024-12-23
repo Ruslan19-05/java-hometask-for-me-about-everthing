@@ -79,14 +79,28 @@ public class Family {
 
     public boolean deleteChild(int index) {
         if (index < 0 || index >= children.length) {
+            System.out.println("Invalid index");
             return false;
         }
-        children[index].setFamily(null);
         Human[] newChildren = new Human[children.length - 1];
-        System.arraycopy(children, 0, newChildren, 0, index);
-        System.arraycopy(children, index + 1, newChildren, index, children.length - index - 1);
+        for (int i = 0, j = 0; i < children.length; i++) {
+            if (i != index) {
+                newChildren[j++] = children[i];
+            } else {
+                children[i].setFamily(null);
+            }
+        }
         children = newChildren;
         return true;
+    }
+
+    public boolean deleteChild(Human child) {
+        for (int i = 0; i < children.length; i++) {
+            if (children[i].equals(child)) {
+                return deleteChild(i);
+            }
+        }
+        return false;
     }
 
 
