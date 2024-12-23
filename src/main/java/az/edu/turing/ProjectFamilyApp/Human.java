@@ -35,9 +35,23 @@ public class Human {
         this.surname=surname;
     }
 
-    public Human(String name,String surname){
+    public Human(String name, String surname, int year, int iq, DayOfWeek[][] schedule, Family family){
         this.name=name;
         this.surname=surname;
+    }
+
+    public Human(String name, String surname, int dateOfBirth, int iQ, Pet pet, DayOfWeek[][] schedule, Family family) {
+        this.name = name;
+        this.surname = surname;
+        this.dateOfBirth = dateOfBirth;
+        this.iQ = iQ;
+        this.pet = pet;
+        this.schedule = schedule;
+        this.family = family;
+    }
+
+    public Human(String name, String surname, int age, int iQ, String[][] schedule, Family family) {
+
     }
 
     public String getName() {
@@ -97,18 +111,12 @@ public class Human {
     }
 
     public void greetPet(){
-        System.out.println("Hello,Pet!");
+        System.out.println("Hello,"+family.getPet().getNickname());
     }
 
     public void describePet(){
-        String s;
-        if(pet.getTrickLevel()>50){
-             s=" very sly";
-        }else {
-             s=" almost not sly";
-        }
-        System.out.println("I have an "+pet.getSpecies()+" is "+pet.getAge()+
-                " years old, he is"+s);
+        String slyness = (family.getPet().getTrickLevel() > 50) ? "Very sly" : "Almost not sly";
+        System.out.println("I have an " + family.getPet().getSpecies() + "is " + family.getPet().getAge() + "years old.He is very  ");
     }
 
     public boolean feedPet(boolean isFeedingTimes){

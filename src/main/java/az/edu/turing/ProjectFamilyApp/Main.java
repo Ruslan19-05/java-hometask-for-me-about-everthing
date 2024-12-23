@@ -6,8 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Human human=new Man("Qalkiper","QUMBARA",1901);
-        Human human2=new Woman("Zuarefe","CEKICAN",1902);
+        Human mother=new Human("Nigar","Sultanova",1990);
+        Human father=new Human("Veli","Ehmedov",1988);
+        Family family = new Family(mother, father);
 
         String[] schedule = new String[DayOfWeek.values().length];
 
@@ -24,7 +25,25 @@ public class Main {
             System.out.println(day.name() + ": " + schedule[day.ordinal()]);
         }
 
-        System.out.println(human);
-        System.out.println(human2);
+        System.out.println(mother);
+        System.out.println(father);
+
+        String[] dogHabits={"running","Barking","Biting someone"};
+        Pet dog=new Dog("Bobik",2,80,dogHabits);
+
+        String[] fishHabits={"swim","eating"};
+        Pet fish=new Fish("Neon",5,95,fishHabits);
+
+        dog.getHabits();
+        dog.respond();
+        dog.eat();
+
+        fish.getHabits();
+        fish.respond();
+        fish.eat();
+
+        System.out.println(dog instanceof Foul) ;
+            ((Foul) dog).foul();
+
     }
 }

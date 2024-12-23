@@ -6,12 +6,8 @@ public class Woman extends Human{
         super(name, surname, dateOfBirth);
     }
 
-    public Woman(String name, String surname, Human father, Human mother) {
-        super(name, surname, father, mother);
-    }
-
-    public Woman(String name,String surname){
-        super(name,surname);
+    public Woman(String name, String surname, int year, int iq, DayOfWeek[][] schedule, Family family) {
+        super(name, surname, year, iq, schedule, family);
     }
 
     @Override

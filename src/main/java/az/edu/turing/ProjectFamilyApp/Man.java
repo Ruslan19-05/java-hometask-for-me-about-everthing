@@ -3,16 +3,8 @@ package az.edu.turing.ProjectFamilyApp;
 public class Man extends Human{
 
 
-    public Man(String name, String surname, int dateOfBirth) {
-        super(name, surname, dateOfBirth);
-    }
-
-    public Man(String name, String surname, Human father, Human mother) {
-        super(name, surname, father, mother);
-    }
-
-    public Man(String name,String surname){
-        super(name,surname);
+    public Man(String name, String surname, int year, int iq, DayOfWeek[][] schedule, Family family) {
+        super(name, surname, year, iq, schedule, family);
     }
 
     @Override

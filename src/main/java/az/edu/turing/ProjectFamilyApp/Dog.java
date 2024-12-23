@@ -2,8 +2,9 @@ package az.edu.turing.ProjectFamilyApp;
 
 public class Dog extends Pet implements Foul{
 
-    public Dog(String nickname,int age,int trickLevel,String[] habits){
-        super(nickname,age,trickLevel,habits);
+    public Dog(String nickName, int age, int trickLevel,String[] habits) {
+        super(nickName, age, trickLevel,habits);
+        setSpecies(Species.DOG);
     }
 
     @Override
@@ -13,6 +14,6 @@ public class Dog extends Pet implements Foul{
 
     @Override
     public void foul(){
-            System.out.println("Opps,I made a mess.");
+            System.out.println("Dog made a mess in the garden!");
     }
 }

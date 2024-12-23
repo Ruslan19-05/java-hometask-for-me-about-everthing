@@ -17,12 +17,23 @@ public abstract class Pet {
         this.habits=habits;
     }
 
-    public Pet(Species species,String nickname){
+    public Pet(Species species,String nickname,int trickLevel){
         this.species=species;
         this.nickname=nickname;
+        this.trickLevel=trickLevel;
     }
 
-    public Pet(){
+    public Pet(String nickname,int age,int trickLevel){
+        this.nickname=nickname;
+        this.age=age;
+        this.trickLevel=trickLevel;
+    }
+
+    public Pet( String nickname) {
+        this.nickname = nickname;
+    }
+
+    public Pet() {
 
     }
 
@@ -67,7 +78,7 @@ public abstract class Pet {
     }
 
     public void eat(){
-        System.out.println(nickname+" am eating.");
+        System.out.println("I am " + getSpecies() + " and I am eating");
     }
 
     public abstract void respond();

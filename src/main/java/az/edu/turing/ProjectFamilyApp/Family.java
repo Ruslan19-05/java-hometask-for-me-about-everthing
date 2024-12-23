@@ -24,6 +24,15 @@ public class Family {
         this.father.setFamily(this);
     }
 
+    public Family(Human mother, Human father) {
+        if (mother == null || father == null) {
+            System.out.println("Both parents must be provided to create a family.");
+        }
+        this.mother = mother;
+        this.father = father;
+        this.children = new Human[0];
+    }
+
     public Human getMother() {
         return mother;
     }
@@ -58,37 +67,26 @@ public class Family {
 
     public void addChild(Human child){
 
-        Human[] newChildren=Arrays.copyOf(children,children.length+1);
-        newChildren[children.length]=child;
-        children=newChildren;
+        Human[] newChildren = new Human[children.length + 1];
 
-        child.setFamily(this);
+        for (int i = 0; i < children.length; i++) {
+            newChildren[i] = children[i];
+        }
+        newChildren[newChildren.length-1]=child;
+
+        this.children=newChildren;
     }
 
-    public boolean deleteChild(int index){
-        if(index<0 || index >=children.length){
+    public boolean deleteChild(int index) {
+        if (index < 0 || index >= children.length) {
             return false;
         }
-
         children[index].setFamily(null);
-
-        Human[] newChild=new Human[children.length-1];
-        for(int i=0,j=0;i<children.length;i++){
-            if(i!=index){
-                newChild[j++]=children[i];
-            }
-        }
-        children=newChild;
+        Human[] newChildren = new Human[children.length - 1];
+        System.arraycopy(children, 0, newChildren, 0, index);
+        System.arraycopy(children, index + 1, newChildren, index, children.length - index - 1);
+        children = newChildren;
         return true;
-    }
-
-    public boolean deleteChild(Human child) {
-        for (int i = 0; i < children.length; i++) {
-            if (children[i].equals(child)) {
-                return deleteChild(i);
-            }
-        }
-        return false;
     }
 
 
@@ -103,10 +101,10 @@ public class Family {
     @Override
     public String toString() {
         return "Family{" +
-                "Mother='" + mother + '\'' +
-                ", Father='" + father + '\'' +
-                ", Children=" + Arrays.toString(children) +
-                ", Pet=" + pet +'\'' +
+                "mother=" + (mother != null ? mother.toString() : "No mother") +
+                ", father=" + (father != null ? father.toString() : "No father") +
+                ", children=" + Arrays.toString(children) +
+                ", pet=" + (pet != null ? pet.toString() : "No pet") +
                 '}';
     }
 
