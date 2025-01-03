@@ -6,9 +6,12 @@ public class Main {
 
     public static void main(String[] args) {
 
+        String[] dogHabits={"running","Barking","Biting someone"};
+        Pet dog=new Dog("Bobik",2,80,dogHabits);
         Human mother=new Human("Nigar","Sultanova",1990);
         Human father=new Human("Veli","Ehmedov",1988);
         Family family = new Family(mother, father);
+
 
         String[] schedule = new String[DayOfWeek.values().length];
 
@@ -28,9 +31,6 @@ public class Main {
         System.out.println(mother);
         System.out.println(father);
 
-        String[] dogHabits={"running","Barking","Biting someone"};
-        Pet dog=new Dog("Bobik",2,80,dogHabits);
-
         String[] fishHabits={"swim","eating"};
         Pet fish=new Fish("Neon",5,95,fishHabits);
 
@@ -41,6 +41,11 @@ public class Main {
         fish.getHabits();
         fish.respond();
         fish.eat();
+        dog.respond();
+        father.greetPet();
+        mother.describePet();
+
+        System.out.println( family.countFamily());
 
         System.out.println(dog instanceof Foul) ;
             ((Foul) dog).foul();

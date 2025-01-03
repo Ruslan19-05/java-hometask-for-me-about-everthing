@@ -45,9 +45,8 @@ public class Human {
         this.family = family;
     }
 
-    public Human() {
 
-    }
+
 
     public String getName() {
         return name;
@@ -106,12 +105,32 @@ public class Human {
     }
 
     public void greetPet(){
-        System.out.println("Hello,"+family.getPet().getNickname());
+        if (this.family == null) {
+            System.out.println("Family is not initialized!");
+            return;
+        }
+        Pet pet = this.family.getPet();
+        if (pet != null) {
+            System.out.println("Hello, " + pet.getNickname() + "!");
+        } else {
+            System.out.println("No pet found in the family!");
+        }
     }
 
     public void describePet(){
-        String slyness = (family.getPet().getTrickLevel() > 50) ? "Very sly" : "Almost not sly";
-        System.out.println("I have an " + family.getPet().getSpecies() + "is " + family.getPet().getAge() + "years old.He is very  ");
+        if (family == null) {
+            System.out.println("Family is not initialized!");
+            return;
+        }
+
+        Pet pet = family.getPet();
+        if (pet == null) {
+            System.out.println("The family does not have a pet.");
+            return;
+        }
+
+        String slyness = (pet.getTrickLevel() > 50) ? "very sly" : "almost not sly";
+        System.out.println("I have a " + pet.getSpecies() + " who is " + pet.getAge() + " years old. He is " + slyness + ".");
     }
 
     public boolean feedPet(boolean isFeedingTimes){
