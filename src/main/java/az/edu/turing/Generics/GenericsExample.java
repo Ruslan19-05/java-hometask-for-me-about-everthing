@@ -1,17 +1,12 @@
 package az.edu.turing.Generics;
 
-import java.util.ArrayList;
-
 public class GenericsExample {
 
-    public static void main(String[]args){
-        shout("John",78);
+    public static <T> void printArray(T[] array) {
 
-    }
-
-    private static <DG,V> DG  shout(DG thingToShout,V otherThingShout){
-        System.out.println(thingToShout+"!!!!!");
-        System.out.println(otherThingShout+"!!!!");
-        return thingToShout;
+        for (T element : array) {
+            System.out.println(element);
+        }
     }
 }
+
