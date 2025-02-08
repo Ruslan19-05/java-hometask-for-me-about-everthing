@@ -1,5 +1,7 @@
 package az.edu.turing.adventureGamee.player;
 
+import az.edu.turing.adventureGamee.inventory.Weapon;
+
 import static az.edu.turing.adventureGamee.util.InputUtil.getInteger;
 
 public class Player {
@@ -9,6 +11,7 @@ public class Player {
     private Integer damage;
     private Integer health;
     private Integer money;
+    private Weapon weapon=new Weapon(0,"none",0,0);
 
     public Player(Integer id, String name, Integer damage, Integer health, Integer money) {
         this.id = id;
@@ -90,6 +93,14 @@ public class Player {
 
     public void setMoney(Integer money) {
         this.money = money;
+    }
+
+    public Weapon getWeapon() {
+        return weapon;
+    }
+
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
     }
 
 
